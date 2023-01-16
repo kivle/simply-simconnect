@@ -1,4 +1,6 @@
-mod bindings;
-mod simconnect;
+use simply_simconnect::simconnect::SimConnect;
 
-fn main() {}
+fn main() {
+    let s = &mut SimConnect::new();
+    s.open("test").unwrap();
+}
